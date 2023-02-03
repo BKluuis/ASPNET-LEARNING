@@ -1,5 +1,3 @@
-//=========Program.cs=========//
-
 using LoginUsingMiddlewares.CustomMiddlewares;
 using Microsoft.AspNetCore.Http;
 
