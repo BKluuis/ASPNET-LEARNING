@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Http;
-using System;
-
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -20,6 +17,7 @@ app.UseEndpoints(endpoints =>
         endpoints.MapGet("countries", async (HttpContext context) => 
         { 
             context.Response.StatusCode = 200;
+
             foreach(KeyValuePair<int, string> country in countries)
             {
                 await context.Response.WriteAsync($"{country.Key}, {country.Value}\n");
