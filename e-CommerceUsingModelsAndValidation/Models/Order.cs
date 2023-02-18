@@ -26,7 +26,7 @@ namespace e_CommerceUsingModelsAndValidation.Models
                 totalPrice = Convert.ToDouble(product.Price * product.Quantity);
             }
 
-            if(InvoicePrice.Value != totalPrice)
+            if(InvoicePrice != totalPrice)
             {
                 yield return new ValidationResult("Invoice Price doesn't match with the total cost of the specified products in the order.", new[] { nameof(InvoicePrice) });
             }
