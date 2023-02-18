@@ -20,7 +20,7 @@ namespace e_CommerceUsingModelsAndValidation.Controllers
                 return BadRequest(errors);
             }
             order.OrderNo = new Random().Next(1, 99999);
-            return Json(order.OrderNo);
+            return Json(new { OrderNumber = order.OrderNo });
         }
     }
 }
