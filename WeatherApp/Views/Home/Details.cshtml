@@ -1,0 +1,63 @@
+﻿@model CityWeather
+
+@{
+    ViewBag.Title = "Web Weather";
+}
+
+@{
+    string defineColor(double temperature)
+    {
+        if (temperature > 74)
+        {
+            return "orange-back";
+        }
+        else if (temperature < 44)
+        {
+            return "blue-back";
+        }
+        else
+        {
+            return "green-back";
+        }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" lang="pt-br" />
+  <link href="~/StyleSheet.css" rel="stylesheet" />
+  <title>@ViewBag.Title</title>
+ </head>
+  <body>
+   <div class="navbar">
+    <a href="/" class="navbar-brand">Weather</a>   
+   </div>
+    <div class="container background-image">
+     <div class="page-content">
+      <div class="flex">
+       <div class="text-left flex-borderless w-25 margin-auto margin-top-200 @defineColor(Model.TemperatureFahrenheit)">
+        <div class="w-50 inline-block">
+         <div>
+          <h2>@Model.CityName</h2>
+         </div>  
+         <div class="text-dark-grey">
+          <h4>@Model.DateAndTime.ToString("dd MMMM yyyy")</h4>
+          <h4>@Model.DateAndTime.ToString("hh:mm tt")</h4>
+         </div> 
+        </div>
+        <div class="w-50 inline-block border-left text-center">
+         <h2>
+          @Model.TemperatureFahrenheit 
+          <sup class="text-grey">ºF</sup>
+         </h2>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   <div class="footer-content">
+       Weather app Copyright &copy; 2023 all rights reserved.
+   </div>
+  </body>
+</html>

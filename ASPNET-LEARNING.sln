@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountriesRouting", "Countri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankUsingControllers", "BankUsingControllers\BankUsingControllers.csproj", "{D02D8C4D-06A4-4940-8C9C-9DCD3C693373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-CommerceUsingModelsAndValidation", "e-CommerceUsingModelsAndValidation\e-CommerceUsingModelsAndValidation.csproj", "{2407BB9F-42F3-4C2C-94FE-7A13D9417F8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "e-CommerceUsingModelsAndValidation", "e-CommerceUsingModelsAndValidation\e-CommerceUsingModelsAndValidation.csproj", "{2407BB9F-42F3-4C2C-94FE-7A13D9417F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{CEE66DDA-CC1A-43E4-8FEE-5C99D6222C29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2407BB9F-42F3-4C2C-94FE-7A13D9417F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2407BB9F-42F3-4C2C-94FE-7A13D9417F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2407BB9F-42F3-4C2C-94FE-7A13D9417F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE66DDA-CC1A-43E4-8FEE-5C99D6222C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE66DDA-CC1A-43E4-8FEE-5C99D6222C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE66DDA-CC1A-43E4-8FEE-5C99D6222C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE66DDA-CC1A-43E4-8FEE-5C99D6222C29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
