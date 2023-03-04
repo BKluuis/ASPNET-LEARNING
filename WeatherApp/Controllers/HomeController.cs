@@ -33,6 +33,9 @@ namespace WeatherApp.Controllers
             {
                 return View(cities);
             }
+            Response.StatusCode = StatusCodes.Status418ImATeapot;
+            ViewBag.Error = Response.StatusCode;
+            ViewBag.ErrorMessage = "Guess somethin went wrong...";
             return View("_Error");
         }
         [Route("/weather/{cityCode}")]
@@ -40,14 +43,20 @@ namespace WeatherApp.Controllers
         {
             if(cityCode == null)
             {
-                return View("_Error", "error-message");
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                ViewBag.Error = Response.StatusCode;
+                ViewBag.ErrorMessage = "No city code";
+                return View("_Error");
             }
 
             CityWeather? city = cities.FirstOrDefault(c => c.CityUniqueCode == cityCode);
 
             if(city == null)
             {
-                return View("_Error", "error-message");
+                Response.StatusCode = StatusCodes.Status400BadRequest;
+                ViewBag.Error = Response.StatusCode;
+                ViewBag.ErrorMessage = "No city found";
+                return View("_Error");
             }
 
             return View(city);
