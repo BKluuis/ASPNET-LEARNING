@@ -35,7 +35,7 @@ namespace WeatherApp.Controllers
             }
             Response.StatusCode = StatusCodes.Status418ImATeapot;
             ViewBag.Error = Response.StatusCode;
-            ViewBag.ErrorMessage = "Guess somethin went wrong...";
+            ViewBag.ErrorMessage = "Guess something went wrong...";
             return View("_Error");
         }
         [Route("/weather/{cityCode}")]
